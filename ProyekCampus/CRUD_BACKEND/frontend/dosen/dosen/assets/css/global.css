@@ -1,0 +1,110 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background halaman */
+body {
+    background-color: #1e48d8; /* biru tua */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card login */
+.login-card {
+    background-color: #fff;
+    width: 350px;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Logo dan judul */
+.logo {
+    margin-bottom: 1.5rem;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo h2 {
+    color: #1e48d8;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.logo p {
+    color: #777;
+    font-size: 0.85rem;
+}
+
+/* Input form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+input:focus {
+    border-color: #1e48d8;
+    box-shadow: 0 0 4px rgba(30, 72, 216, 0.4);
+}
+
+/* Tombol login */
+.btn-login {
+    width: 100%;
+    background-color: #1e48d8;
+    color: white;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-top: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #1537b8;
+}
+
+/* Link daftar */
+.register-text {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.register-text a {
+    color: #1e48d8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
