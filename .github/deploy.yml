@@ -1,0 +1,31 @@
+name: Deploy CampusCare PHP Native
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: SSH Deploy
+      uses: appleboy/ssh-action@v1
+      with:
+        host: ${{ secrets.SERVER_IP }}
+        username: ${{ secrets.SERVER_USER }}
+        key: ${{ secrets.SSH_KEY }}
+        port: ${{ secrets.SSH_PORT }}
+        script: |
+          # 1. Masuk ke folder proyek CampusCare
+          cd /var/www/CampusCare
+          
+          # 2. Ambil kode terbaru dari GitHub
+          git pull origin main
+          
+          # 3. Perbaiki izin akses folder agar web dan gambar tidak error
+          sudo chown -R www-data:www-data .

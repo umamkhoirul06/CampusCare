@@ -7,7 +7,7 @@ $host = "localhost";
 $user = "root";
 $pass = "";
 $db = "campus_care2";
-$port = 3307;
+$port = 3306;
 
 // --- Koneksi database MySQLi (Object-Oriented) ---
 $koneksi = new mysqli($host, $user, $pass, $db, $port);
